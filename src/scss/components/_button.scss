@@ -1,0 +1,26 @@
+.button_read-more {
+  width: 138px;
+  height: 24px;
+  padding: 1px;
+  color: rgb(27, 28, 33);
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  text-align: left;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+
+.button_read-more::before {
+  content: "";
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  margin-right: 8px;
+  background-image: url('../img/expandread-more.svg');
+  background-size: cover;
+}

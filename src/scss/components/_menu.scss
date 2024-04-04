@@ -1,0 +1,63 @@
+.menu {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.menu__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  gap: $spacing-medium;
+}
+
+.menu__item,
+.menu__link--button {
+  margin: 0;
+  padding: 0;
+}
+
+.menu__link {
+  text-decoration: none;
+  color: $color-text;
+  font-size: $font-size-medium;
+  font-weight: $font-weight-bold;
+  line-height: 1.5;
+  letter-spacing: -0.2px;
+  text-align: left;
+  display: inline-flex;
+  align-items: center;
+}
+
+.menu__link--button {
+  padding: $spacing-small $spacing-medium;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.menu__link--call.round-icon {
+  background-image: url("../img/callcall.svg");
+}
+
+.menu__link--write.round-icon {
+  background-image: url("../img/chatmessage.svg");
+}
+
+.menu__link--login.round-icon,
+.menu__link--call.round-icon,
+.menu__link--call.round-icon {
+  background-image: url("../img/profileuser.svg");
+}
+
+.menu__button--status.round-icon {
+  background-image: url("../img/repairsetting.svg");
+}
+
+.menu__button--application.round-icon {
+  background-image: url("../img/checkstatussearch.svg");
+}
+
+.menu--primary {
+  display: none;
+}

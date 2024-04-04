@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="description" content="Ремонт техники различных брендов">
+    <meta name="keywords" content="телефон, телефонный, телефонная, телефонное, телефонное, телефонное, телефонное,
+    телефонное, телефонное, телефонное, телефонное, телефонное, телефонное, техника, ноутбук,">
+    <meta name="author" content="OxY">
+    <title><%= htmlWebpackPlugin.options.title %></title>
+  </head>
+  <body>
+<!--    <img src="./img/webpack.svg" alt="Webpack Logo" width="200px" />-->
+  <header class="header header--padding">
+      <div class="header__wrapper wrapper">
+        <button type="button" class="menu-burger-button round-icon" aria-label="Открыть меню"><span hidden="hidden">Открыть меню</span></button>
+
+        <div class="header__deliver header__deliver--hidden deliver"></div>
+      </div>
+      <div class="header__logo logo">
+        <a href="#" aria-label="Посетить сайт компании" class="logo__link">
+          <img src="./img/Grouplogotype.svg" alt="Логотип компании CPS" class="logo__logotype">
+        </a>
+      </div>
+      <div class="header__wrapper-menu wrapper-menu">
+        <nav class="menu menu--primary">
+          <ul class="menu__list">
+            <li class="menu__item"><a href="#"
+                                      class="menu__link menu__link--call  round-icon"
+                                      aria-label="Позвонить компании"></a>
+            </li>
+            <li class="menu__item"><a href="#"
+                                      class="menu__link menu__link--write  round-icon"
+                                      aria-label="Написать компании"></a>
+            </li>
+            <li class="menu__item"><a href="#"
+                                      class="menu__link menu__link--login  round-icon"
+                                      aria-label="Зайти в свой кабинет"></a>
+            </li>
+          </ul>
+        </nav>
+        <div class="menu__deliver deliver"></div>
+        <nav class="menu menu--secondary">
+          <ul class="menu__list">
+            <li class="menu__item menu__item--hidden-link">
+              <button class="menu__button menu__button--status round-icon" aria-label="Статус ремонта">
+              </button>
+            </li>
+            <li class="menu__item menu__item--hidden-link">
+              <button class="menu__button menu__button--application round-icon" aria-label="Отправить заявку">
+              </button>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main class="main">
+
+      <header class="main__header">
+        <div class="main__wrapper wrapper">
+          <h1 class="main__title">Услуги и сервисы</h1>
+          <nav class="main__menu main__menu--hidden menu--secondary">
+            <ul class="menu__list">
+              <li class="menu__item menu__item--hidden-link">
+                <button class="menu__button"><span>Статус ремонта</span></button>
+              </li>
+              <li class="menu__item menu__item--hidden-link">
+                <button class="menu__button"><span>Отправить заявку</span></button>
+              </li>
+            </ul>
+          </nav>
+
+        </div>
+        <nav class="navigation">
+          <ul class="navigation__list">
+            <li class="navigation__item navigation__item--active"><a href="#"
+                                                                     class="navigation__link navigation__link--active">Ремонтируемые
+              бренды</a></li>
+            <li class="navigation__item"><a href="#" class="navigation__link navigation__link-hidden">Дополнительные
+              услуги</a></li>
+            <li class="navigation__item"><a href="#" class="navigation__link">Ремонтируемые устройства</a></li>
+            <li class="navigation__item"><a href="#" class="navigation__link">Цены на услуги</a></li>
+            <li class="navigation__item"><a href="#" class="navigation__link">Адреса сервисных центров</a></li>
+            <li class="navigation__item"><a href="#" class="navigation__link">Специальные цены</a></li>
+            <li class="navigation__item"><a href="#" class="navigation__link">Отзывы</a></li>
+          </ul>
+        </nav>
+      </header>
+      <section class="main__section">
+        <h2 hidden>Это главная секция</h2>
+        <article class="article">
+          <div class="article__content article__content--size">
+            <h3 hidden>О нас</h3>
+            <p class="article__text article__text--size">
+              Мы являемся авторизованным сервисным центром по ремонту техники Dell. Только у нас вы можете
+              отремонтировать свой ноутбук Dell с официальной гарантией производителя.
+              <br> <br>
+              <span class="text__hidden-part">Мы успешно работаем с 1992 года и заслужили репутацию надежного партнера, что подтверждает большое количество постоянных клиентов. Мы гордимся тем, что к нам обращаются по рекомендациям и, в свою очередь, советуют нас родным и близким.</span>
+            </p>
+            <button type="button" class="article__button button button_read-more">Читать далее</button>
+          </div>
+          <img src="./img/Picture%20Copybackground-logotype.jpg" alt="Это фото логотипа компании"
+               class="article__image">
+        </article>
+      </section>
+    </main>
+
+  </body>
+</html>
