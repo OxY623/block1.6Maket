@@ -1,0 +1,32 @@
+.navigation {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  height: 60px;
+  white-space: nowrap;
+  display: flex;
+  overflow-x: auto;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  // .navigation__list
+  &__list {
+  }
+
+  // .navigation__item
+  &__item {
+    // .navigation__item--active
+    &--active {
+    }
+  }
+
+  // .navigation__link
+  &__link {
+    // .navigation__link--active
+    &--active {
+    }
+  }
+
+  // .navigation__link-hidden
+  &__link-hidden {
+  }
+}

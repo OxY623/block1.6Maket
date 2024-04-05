@@ -1,0 +1,72 @@
+.menu {
+  display: flex;
+  justify-content: flex-start;
+
+  &--primary {
+
+  }
+
+  // .menu__list
+  &__list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    gap: 16px;
+  }
+
+  // .menu__item
+  &__item {
+    margin: 0;
+    padding: 0;
+
+    // .menu__item--hidden-link
+    &--hidden-link {
+    }
+  }
+
+  // .menu__link
+  &__link {
+    text-decoration: none;
+    color: $color-text;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: -0.2px;
+    text-align: left;
+    display: inline-flex;
+    align-items: center;
+    // .menu__link--call
+    &--call {
+      background-image: url($url-image-icon-call);
+    }
+
+    // .menu__link--write
+    &--write {
+      background-image: url($url-image-icon-write);
+    }
+
+    // .menu__link--login
+    &--login {
+      background-image: url($url-image-icon-login);
+    }
+  }
+
+  // .menu__deliver
+  &__deliver {
+  }
+
+  // .menu__button
+  &__button {
+    // .menu__button--status
+    cursor: pointer;
+
+    &--status {
+      background-image: url($url-image-icon-status);
+    }
+
+    // .menu__button--application
+    &--application {
+      background-image: url($url-image-icon-application);
+    }
+  }
+}

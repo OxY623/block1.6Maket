@@ -1,12 +1,20 @@
 // Colors
 $color-primary: #42a5f5;
+$border-color: rgb(217, 255, 245);
 $color-secondary: #66bb6a;
-$color-background: #f8f8f8;
-$color-text: #333333;
+$color-background:  #f8f8f8;
+$color-text: #1B1C21;
+$white: rgb(255, 255, 255);
+$pink: rgb(255, 62, 121);
+$grey: #7E7E82;
+$color-deliver: rgb(234, 234, 234);
 
 // Fonts
-$font-family-primary: 'Arial', sans-serif;
-$font-family-secondary: 'Roboto', sans-serif;
+//$font-family: 'TT Lakes';
+$font-family-regular: 'TT Lakes Regular';
+$font-family-medium: 'TT Lakes Medium';
+$font-family-bold: 'TT Lakes Bold';
+
 
 // Spacings
 $spacing-small: 8px;
@@ -30,3 +38,13 @@ $font-weight-bold: 700;
 // Z-index
 $z-index-menu: 1000;
 $z-index-overlay: 2000;
+
+//URLS
+$url-image-icon-order: '../img/goside.svg';
+$url-image-icon-commercial-offer__link: '../img/line.svg';
+$url-image-icon-burger: "../img/burger.svg";
+$url-image-icon-call: "../img/call.svg";
+$url-image-icon-write: "../img/chat.svg";
+$url-image-icon-login: "../img/profile.svg";
+$url-image-icon-status: "../img/repair.svg";
+$url-image-icon-application: "../img/checkstatus.svg";

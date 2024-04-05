@@ -1,0 +1,54 @@
+//Block => ORDER
+.order {
+  display: inline-block;
+  //width: 119px;
+  //height: 32px;
+  padding: 4px 39px 4px 12px;
+  border-radius: 16px;
+  background: $pink;
+  color: $white;
+  font-family: $font-family-bold;
+  text-align: left;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  position: relative;
+
+  &:hover {
+    background: $white;
+    color: $pink;
+    transform: scale(1.1);
+  }
+
+  &:focus {
+    filter: saturate(200%) contrast(150%);
+  }
+
+  &__text {
+    width: 63px;
+    height: 24px;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 24px;
+    letter-spacing: -0.15px;
+  }
+
+  &::before {
+    content: "";
+    display: block;
+    width: 24px;
+    height: 24px;
+    background-image: url($url-image-icon-order); /* Путь к изображению */
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    left: 87px;
+    top: 50%;
+    transform: translateY(-50%);
+    left: calc(100% - 24px);
+
+    width: 16px;
+    height: 16px;
+    left: calc(100% - 24px);
+  }
+}
