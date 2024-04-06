@@ -1,21 +1,21 @@
-export function createCardsSwiperServiceMenu() {
-  let servicesMenuItems = document.querySelector('.services-menu__wrapper');
+export function createCardsBlockPrices() {
+  let servicesMenuItems = document.querySelector('.block-prices__cards-list');
 
   function createCard(card) {
     return `
     <div class='card-order swiper-slide'>
       <div class='card-order__container'>
         <div class='card-order__header'>
-          <h2 class='card-order__title'>Ремонтные услуги</h2>
+          <h4 class='card-order__title'>Ремонтные услуги</h4>
           <p class='card-order__description'>${card.cardOrderDescription}</p>
         </div>
         <div class='card-order__body'>
           <div class='card-order__wrapper'>
-            <h3 class='card-order__subtitle'>Цена</h3>
+            <h4 class='card-order__subtitle'>Цена</h4>
             <p class='card-order__price'>${card.cardOrderPrice}</p>
           </div>
           <div class='card-order__wrapper'>
-            <h3 class='card-order__subtitle'>Срок</h3>
+            <h4 class='card-order__subtitle'>Срок</h4>
             <p class='card-order__term'>${card.cardOrderTerm}</p>
           </div>
           <div class='card-order__wrapper'>
@@ -23,6 +23,7 @@ export function createCardsSwiperServiceMenu() {
               <!--todo: Block Order-->
               <a href='#' class='order' aria-label='Сделать заказ'>
                 <span class='order__text'>Заказать</span>
+                <img src="./img/goside.svg" alt="Перейти" class="order__icon">
               </a>
             </div>
           </div>

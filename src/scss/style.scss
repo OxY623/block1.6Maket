@@ -11,13 +11,22 @@
 //Main styles
 @import 'blocks/main/_main.scss';
 @import 'blocks/navigation/_navigation.scss';
+@import 'blocks/block-services/_block-services.scss';
+@import 'blocks/block-repair/_block-repair.scss';
+@import 'blocks/article/_article.scss';
+@import 'blocks/card-order/_card-order.scss';
+@import 'blocks/button-icon/_button-icon.scss';
+@import 'blocks/additional-services/_additional-services.scss';
+@import 'blocks/block-prices/_block-prices.scss';
+//Footer styles
+@import 'blocks/footer/_footer.scss';
 
 
 //Order styles
 @import 'blocks/order/_order.scss';
 
 //Card-order styles
-@import 'blocks/card-order/_card-order.scss';
+
 
 //Commercial-offer
 @import 'blocks/commercial-offer/_commercial-offer.scss';

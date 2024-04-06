@@ -1,0 +1,98 @@
+.block-prices {
+  border-bottom: none;
+  // .block-prices__header
+  &__header {
+    padding: $font-size-medium;
+    height: 56px;
+
+  }
+
+  // .block-prices__title
+  &__title {
+    margin: 0;
+    padding: 0;
+  }
+
+  // .block-prices__cards
+  &__cards {
+    overflow: hidden;
+  }
+
+  // .block-prices__cards-list
+  &__cards-list {
+    padding-bottom: 16px;
+    margin-left: 16px;
+
+  }
+
+  // .block-prices__pagination
+  &__pagination {
+    position: static;
+    margin: 0 auto;
+    padding-bottom: 16px;
+  }
+}
+
+.swiper-container {
+}
+
+.mySwiper {
+}
+
+.swiper-wrapper {
+}
+
+.card-order {
+  // .card-order__container
+  &__container {
+  }
+
+  // .card-order__header
+  &__header {
+  }
+
+  // .card-order__title
+  &__title {
+  }
+
+  // .card-order__description
+  &__description {
+  }
+
+  // .card-order__body
+  &__body {
+  }
+
+  // .card-order__wrapper
+  &__wrapper {
+  }
+
+  // .card-order__subtitle
+  &__subtitle {
+  }
+
+  // .card-order__price
+  &__price {
+  }
+
+  // .card-order__term
+  &__term {
+  }
+
+  // .card-order__button
+  &__button {
+  }
+}
+
+.swiper-slide {
+}
+
+.order {
+  // .order__text
+  &__text {
+  }
+}
+
+.swiper-pagination {
+}
+

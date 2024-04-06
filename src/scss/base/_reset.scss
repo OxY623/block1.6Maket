@@ -16,7 +16,48 @@ body {
   flex-direction: column;
 }
 
+h1{
+  font-family: $font-family-bold, Arial, sans-serif;
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 143%;
+  letter-spacing: -0.02em;
+  color: #1b1c21;
+}
+
+h2{
+  font-family: $font-family-regular, Arial, sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: -0.01em;
+  text-transform: uppercase;
+  color: #7e7e82;
+}
+
+h3{
+  font-family: $font-family-medium;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: -0.01em;
+  color: #1b1c21;
+}
+
+
+
+.p{
+  font-family: $font-family-regular;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 129%;
+  letter-spacing: 0.01em;
+  color: #1b1c21;
+}
+
 
 .wrapper {
   width: auto;
 }
+
+

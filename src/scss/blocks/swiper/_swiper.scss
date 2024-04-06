@@ -1,18 +1,34 @@
 .swiper {
   overflow: hidden;
-  width: 100%;
+  margin-bottom: 16px;
 
   &-wrapper {
+    padding-left: 0;
+  }
+  &-slide {
+    width: auto !important;
   }
 
   &-pagination {
+    &-bullet{
+      width: 12px;
+      height: 12px;
+      border-color: rgb(221, 221, 221);
+    }
+
+    &-bullet-active{
+      background: rgb(181, 182, 188);
+    }
   }
 
   &-slide {
-    width: 260px;
-    height: 200px;
+
   }
 
-  &-pagination{}
+  &-pagination{
+    margin-top:16px;
+  }
 }
+
+
 

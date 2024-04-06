@@ -1,30 +1,26 @@
 <!DOCTYPE html>
-<html lang='en'>
+<html lang='ru'>
 <head>
-  <meta charset='UTF-8' />
-  <meta
-    name='viewport'
-    content='width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0'
-  />
-  <meta http-equiv='X-UA-Compatible' content='ie=edge' />
+  <meta charset='UTF-8'>
+  <meta name='viewport'
+        content='width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0'>
+  <meta http-equiv='X-UA-Compatible' content='ie=edge'>
   <meta name='description' content='Ремонт техники различных брендов'>
-  <meta name='keywords' content='телефон, телефонный, телефонная, телефонное, телефонное, телефонное, телефонное,
-    телефонное, телефонное, телефонное, телефонное, телефонное, телефонное, техника, ноутбук,'>
+  <meta name='keywords'
+        content='телефон, телефонный, телефонная, телефонное, телефонное, телефонное, телефонное, телефонное, телефонное, телефонное, телефонное, телефонное, телефонное, техника, ноутбук'>
   <meta name='author' content='OxY'>
   <title><%= htmlWebpackPlugin.options.title %></title>
-  <link
-    rel='stylesheet'
-    href='https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css'
-  />
+  <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css'>
   <script src='https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js'></script>
 </head>
 <body>
+
 <header class='header'>
   <div class='header__wrapper wrapper'>
-    <button type='button' class='header__menu-burger-button round-icon' aria-label='Открыть меню'><span hidden='hidden'>Открыть меню</span>
+    <button type='button' class='header__menu-burger-button round-icon' aria-label='Открыть меню'>
+      <span hidden='hidden'>Открыть меню</span>
     </button>
-
-    <div class='header__deliver header__deliver--hidden  deliver'></div>
+    <div class='header__deliver header__deliver--hidden deliver'></div>
   </div>
   <div class='header__logo logo'>
     <a href='#' aria-label='Посетить сайт компании' class='logo__link'>
@@ -56,109 +52,165 @@
   </div>
 </header>
 
-
-<main class="main">
-
-  <header class="main__header">
-    <div class="main__wrapper wrapper">
-      <h1 class="main__title">Услуги и сервисы</h1>
-      <nav class="main__menu main__menu--hidden menu--secondary">
-        <ul class="menu__list">
-          <li class="menu__item menu__item--hidden-link">
-            <button class="menu__button"><span>Статус ремонта</span></button>
+<main class='main'>
+  <header class='main__header'>
+    <div class='main__wrapper wrapper'>
+      <h1 class='main__title'>Услуги и сервисы</h1>
+      <nav class='main__menu main__menu--hidden menu--secondary'>
+        <ul class='menu__list'>
+          <li class='menu__item menu__item--hidden-link'>
+            <button class='menu__button'><span>Статус ремонта</span></button>
           </li>
-          <li class="menu__item menu__item--hidden-link">
-            <button class="menu__button"><span>Отправить заявку</span></button>
+          <li class='menu__item menu__item--hidden-link'>
+            <button class='menu__button'><span>Отправить заявку</span></button>
           </li>
         </ul>
       </nav>
-
     </div>
-    <nav class="navigation">
-      <ul class="navigation__list">
-        <li class="navigation__item navigation__item--active"><a href="#"
-                                                                 class="navigation__link navigation__link--active">Ремонтируемые
+    <nav class='navigation'>
+      <ul class='navigation__list'>
+        <li class='navigation__item navigation__item--active'><a href='#'
+                                                                 class='navigation__link navigation__link--active'>Ремонтируемые
           бренды</a></li>
-        <li class="navigation__item"><a href="#" class="navigation__link navigation__link-hidden">Дополнительные
+        <li class='navigation__item'><a href='#' class='navigation__link navigation__link-hidden'>Дополнительные
           услуги</a></li>
-        <li class="navigation__item"><a href="#" class="navigation__link">Ремонтируемые устройства</a></li>
-        <li class="navigation__item"><a href="#" class="navigation__link">Цены на услуги</a></li>
-        <li class="navigation__item"><a href="#" class="navigation__link">Адреса сервисных центров</a></li>
-        <li class="navigation__item"><a href="#" class="navigation__link">Специальные цены</a></li>
-        <li class="navigation__item"><a href="#" class="navigation__link">Отзывы</a></li>
+        <li class='navigation__item'><a href='#' class='navigation__link'>Ремонтируемые устройства</a></li>
+        <li class='navigation__item'><a href='#' class='navigation__link'>Цены на услуги</a></li>
+        <li class='navigation__item'><a href='#' class='navigation__link'>Адреса сервисных центров</a></li>
+        <li class='navigation__item'><a href='#' class='navigation__link'>Специальные цены</a></li>
+        <li class='navigation__item'><a href='#' class='navigation__link'>Отзывы</a></li>
       </ul>
     </nav>
   </header>
-  <section class="main__section">
+
+  <section class='main__section'>
     <h2 hidden>Это главная секция</h2>
-    <article class="article">
-      <div class="article__content article__content--size">
+    <article class='article'>
+      <div class='article__content article__content--size'>
         <h3 hidden>О нас</h3>
-        <p class="article__text article__text--size">
+        <p class='article__text article__text--size'>
           Мы являемся авторизованным сервисным центром по ремонту техники Dell. Только у нас вы можете
           отремонтировать свой ноутбук Dell с официальной гарантией производителя.
           <br> <br>
-          <span class="text__hidden-part">Мы успешно работаем с 1992 года и заслужили репутацию надежного партнера, что подтверждает большое количество постоянных клиентов. Мы гордимся тем, что к нам обращаются по рекомендациям и, в свою очередь, советуют нас родным и близким.</span>
+          <span class='text__hidden-part'>Мы успешно работаем с 1992 года и заслужили репутацию надежного партнера, что подтверждает большое количество постоянных клиентов. Мы гордимся тем, что к нам обращаются по рекомендациям и, в свою очередь, советуют нас родным и близким.</span>
         </p>
-        <button type="button" class="article__button button button_read-more">Читать далее</button>
+        <button type='button' class='article__button button button-icon'>Читать далее</button>
       </div>
-      <img src="../img/PictureCopy.jpg" alt="Это фото логотипа компании"
-           class="article__image">
+      <img src='../img/PictureCopy.jpg' alt='Это фото логотипа компании' loading='lazy' class='article__image'>
     </article>
   </section>
-</main>
 
-<!-- Раздел "Дополнительные услуги" -->
-<section id='additional-services' class='additional-services'>
-  <h2 class='additional-services__title'>Дополнительные услуги</h2>
-  <p class='additional-services__description'>Здесь можно описать дополнительные услуги, предоставляемые вашей
-    компанией.</p>
-</section>
-
-<!-- Раздел "Цены на услуги" -->
-<section id='prices' class='main__section prices'>
-  <h2 class='prices__title'>Цены на услуги</h2>
-  <div class='price-card'>
-    <h3 class='price-card__title'>Ремонтные услуги</h3>
-    <div class='price-card__item'>
-      <h4 class='price-card__subtitle'>Тестирование с выдачей технического заключения</h4>
-      <p class='price-card__price'>Цена: Бесплатно</p>
-      <p class='price-card__term'>Срок: 30-120 мин</p>
-      <a href='#order' class='price-card__order-link'>Заказать</a>
+  <section class='main__section block-services block'>
+    <header class='block-services__title block-services__title--padding'>
+      <h2 class='block-services__title-text'>
+        Ремонт техники различных брендов
+      </h2>
+    </header>
+    <div
+      class='block-services__cards block-services__cards--padding mySwiper swiper-container'
+    >
+      <ul
+        class='block-services__cards-list list list--distance swiper-wrapper'
+      >
+        <!-- Карточки будут добавлены программно -->
+      </ul>
+      <div class='swiper-pagination block-services__swiper'></div>
+      <button class='button block-services__button button--disable'>
+        Показать все
+      </button>
     </div>
-    <!-- Здесь можно добавить остальные ремонтные услуги -->
-  </div>
-</section>
-</main>
+  </section>
 
-<footer class='footer'>
-  <p class='footer__copyright'>© 2019 CPS</p>
-  <p class='footer__developer'>Разработано командой Apesong</p>
-  <nav class='footer__nav'>
-    <ul class='footer__nav-list'>
-      <li class='footer__nav-item'><a href='#privacy-policy' class='footer__nav-link'>Политика конфиденциальности</a>
-      </li>
-    </ul>
-  </nav>
-  <p class='footer__disclaimer'>Информация, размещенная на данной странице, не является публичной офертой</p>
-</footer>
+  <section class='main__section block-repair block'>
+    <div class='block-repair__header'>
+      <h2 class='block-repair__title'>Ремонт различных видов техники</h2>
+    </div>
+    <div class='repair block-repair__container mySwiper swiper-container second-swiper-container'>
+      <div class='swiper-wrapper block-repair__wrapper'>
+        <!-- Содержимое слайдов -->
+        <div class='block-repair__item block-repair__item swiper-slide'>
+          <a href='#' class='block-repair__link'>
+            <h3 class='block-repair__title'>Ремонт ноутбуков</h3>
+            <img class='block-repair__icon' src='../img/go.svg' alt='Нажми меня'>
+          </a>
+        </div>
 
-<div class='components'>
-  <div class='components__container'>
+        <div class='block-repair__item block-repair__item swiper-slide'>
+          <a href='#' class='block-repair__link'>
+            <h3 class='block-repair__title'>Ремонт планшетов</h3>
+            <img class='block-repair__icon' src='../img/go.svg' alt='Нажми меня'>
+          </a>
+        </div>
 
-    <div class='components__item'>
-      <div class='components__item-wrapper'>
-        <h1>CardOrder</h1>
-        <!--todo: block CardOrder-->
-        <a href='#' class='order' aria-label='Сделать заказ'><span class='order__text'>Заказать</span></a>
+        <div class='block-repair__item block-repair__item swiper-slide'>
+          <a href='#' class='block-repair__link'>
+            <h3 class='block-repair__title'>Ремонт ПК</h3>
+            <img class='block-repair__icon' src='../img/go.svg' alt='Нажми меня'>
+          </a>
+        </div>
+
+        <div class='block-repair__item block-repair__item swiper-slide'>
+          <a href='#' class='block-repair__link'>
+            <h3 class='block-repair__title'>Ремонт ПК</h3>
+            <img class='block-repair__icon' src='../img/go.svg' alt='Нажми меня'>
+          </a>
+        </div>
+
+        <div class='block-repair__item block-repair__item swiper-slide'>
+          <a href='#' class='block-repair__link'>
+            <h3 class='block-repair__title'>Ремонт мониторов </h3>
+            <img class='block-repair__icon' src='../img/go.svg' alt='Нажми меня'>
+          </a>
+        </div>
+
+        <div class='block-repair__item block-repair__item swiper-slide'>
+          <a href='#' class='block-repair__link'>
+            <h3 class='block-repair__title'>Ремонт ноутбуков</h3>
+            <img class='block-repair__icon' src='../img/go.svg' alt='Нажми меня'>
+          </a>
+        </div>
+
+        <div class='block-repair__item block-repair__item swiper-slide'>
+          <a href='#' class='block-repair__link'>
+            <h3 class='block-repair__title'>Ремонт планшетов</h3>
+            <img class='block-repair__icon' src='../img/go.svg' alt='Нажми меня'>
+          </a>
+        </div>
+
+        <div class='block-repair__item block-repair__item swiper-slide'>
+          <a href='#' class='block-repair__link'>
+            <h3 class='block-repair__title'>Ремонт ПК</h3>
+            <img class='block-repair__icon' src='../img/go.svg' alt='Нажми меня'>
+          </a>
+        </div>
+
+        <div class='block-repair__item block-repair__item swiper-slide'>
+          <a href='#' class='block-repair__link'>
+            <h3 class='block-repair__title'>Ремонт ПК</h3>
+            <img class='block-repair__icon' src='../img/go.svg' alt='Нажми меня'>
+          </a>
+        </div>
+
+        <div class='block-repair__item block-repair__item swiper-slide'>
+          <a href='#' class='block-repair__link'>
+            <h3 class='block-repair__title'>Ремонт мониторов </h3>
+            <img class='block-repair__icon' src='../img/go.svg' alt='Нажми меня'>
+          </a>
+        </div>
       </div>
+      <!-- Добавление кнопок навигации -->
+      <div class='swiper-pagination block-repair__pagination'></div>
+      <button class='button block-repair__button button--disable'></button>
     </div>
-
-
-    <div class='components__item'>
-      <div class='components__item-wrapper'>
-        <h1>block CardOrder</h1>
-        <!--todo: block CardOrder-->
+  </section>
+  <!--todo: Работаю здесь-->
+  <section class='main__section block-prices'>
+    <div class='block-prices__header'>
+      <h2 class='block-prices__title'>Цены на услуги</h2>
+    </div>
+    <div class='block-prices__cards swiper-container mySwiper'>
+      <div class='block-prices__cards-list swiper-wrapper'>
+        <!--First-slide-->
         <div class='card-order swiper-slide'>
           <div class='card-order__container'>
             <div class='card-order__header'>
@@ -176,7 +228,6 @@
               </div>
               <div class='card-order__wrapper'>
                 <div class='card-order__button'>
-                  <!--todo: Block Order-->
                   <a href='#' class='order' aria-label='Сделать заказ'>
                     <span class='order__text'>Заказать</span>
                   </a>
@@ -185,68 +236,37 @@
             </div>
           </div>
         </div>
+        <!-- Другие слайды здесь -->
       </div>
+      <div class='swiper-pagination block-prices__pagination'></div>
     </div>
+  </section>
 
+  <section  class='main__section'>
+    <div class='commercial-offer'>
+      <p class='commercial-offer__article'>
+        Все цены указаны с учетом НДС. Стоимость ремонта указана на единичную услугу.
+        Для получения коммерческого предложения на постоянное обслуживание, оставьте заявку.
+      </p>
 
-    <!--    <div class='components__item'>-->
-    <!--      <div class='components__item-wrapper'>-->
-    <!--        <h1>Commercial-Offer</h1>-->
-    <!--        &lt;!&ndash;todo: block Commercial-Offer&ndash;&gt;-->
-
-    <!--        &lt;!&ndash; Блок "Коммерческое предложение" &ndash;&gt;-->
-    <!--        <div class='commercial-offer'>-->
-    <!--          <p class='commercial-offer__article'>-->
-    <!--            Все цены указаны с учетом НДС. Стоимость ремонта указана на единичную услугу.-->
-    <!--            Для получения коммерческого предложения на постоянное обслуживание, оставьте заявку.-->
-    <!--          </p>-->
-    <!--          &lt;!&ndash; Элемент "Ссылка" блока "Коммерческое предложение" &ndash;&gt;-->
-    <!--          <a href='#' class='commercial-offer__link'>-->
-    <!--            &lt;!&ndash; Элемент "Текст" блока "Ссылка" &ndash;&gt;-->
-    <!--            <span class='commercial-offer__text'>Получить коммерческое предложение</span>-->
-    <!--          </a>-->
-    <!--        </div>-->
-    <!--      </div>-->
-    <!--    </div>-->
-
-    <div class='components__item'>
-      <div class='components__item-wrapper'>
-        <h1>ServicesMenu</h1>
-        <!--todo: block ServicesMenu-->
-        <section class='services-menu'>
-          <div class='services-menu__header'>
-            <h2 class='services-menu__title'>Цены на услуги</h2>
-          </div>
-          <div class='services-menu__body'>
-            <div class='services-menu__content'>
-              <div class='services-menu__row'> <!-- Удалено атрибут hidden -->
-                <div class='services-menu__item'>
-                  <div class='services-menu__subitem'>Ремонтные услуги</div>
-                  <div class='services-menu__subitem'>Цена</div>
-                  <div class='services-menu__subitem'>Срок</div>
-                  <div hidden>Заказать</div>
-                </div>
-              </div>
-              <!-- Slider main container -->
-              <div class='services-menu__swiper swiper'>
-                <!-- Additional required wrapper -->
-                <div class='services-menu__wrapper swiper-wrapper'>
-                  <!-- Slides -->
-                </div>
-                <!-- If we need pagination -->
-                <div class='swiper-pagination'></div>
-
-              </div>
-            </div>
-          </div>
-        </section>
-      </div>
+      <a href='#' class='commercial-offer__link'>
+        <span class='commercial-offer__text'>Получить коммерческое предложение</span>
+      </a>
     </div>
+  </section>
+</main>
 
+<footer class='footer'>
+  <p class='footer__copyright'>© 2019 CPS</p>
+  <p class='footer__developer'>Разработано командой Apesong</p>
+  <nav class='footer__nav'>
+    <div class='footer__nav-list'>
+      <div class='footer__nav-item'><a href='#' class='footer__nav-link'>Политика конфиденциальности</a></div>
+    </div>
+  </nav>
+  <p class='footer__disclaimer'>Информация, размещенная на данной странице, не является публичной офертой</p>
+</footer>
 
-  </div>
-</div>
-
-
+<script src='https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js'></script>
 </body>
 </html>

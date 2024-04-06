@@ -1,4 +1,8 @@
 .commercial-offer {
+  width: 288px;
+  height: 191px;
+  padding: 0 16px 0 16px;
+  margin-bottom:42px;
   // .commercial-offer__article
   &__article {
     font-size: 14px;
@@ -6,10 +10,12 @@
     line-height: 20px;
     letter-spacing: 0.2px;
     text-align: left;
+    padding-bottom: 20px;
   }
 
   // .commercial-offer__link
   &__link {
+    text-decoration: none;
     position: relative;
     width: 192px;
     height: 54.98px;

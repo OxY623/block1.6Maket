@@ -1,6 +1,16 @@
 .card-order {
+  display: flex;
   width: 260px;
-  height: 200px;
+  height: 168px;
+  padding: 16px;
+  border-radius: 6px;
+  background: $white;
+  flex-wrap: wrap;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Размещаем элементы внутри контейнера по вертикали с равным пространством между ними */
+  width: 260px;
+  height: 168px;
   padding: 16px;
   border-radius: 6px;
   background: $white;
@@ -18,11 +28,17 @@
   // .card-order__header
   &__header {
     text-align: left;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width:228px;
+    height: 56px;
   }
 
   // .card-order__title
   // .card-order__subtitle
   &__title, &__subtitle  {
+    margin: 0;
     font-family: $font-family-medium;
     color: $grey;
     font-size: 14px;
@@ -34,6 +50,8 @@
 
   // .card-order__description
   &__description {
+    margin: 0;
+    padding: 0;
   }
 
   // .card-order__body
@@ -53,29 +71,31 @@
   // .card-order__price
   &__price {
     grid-row: 1;
+    margin: 0;
+    padding: 0;
   }
 
   // .card-order__term
   &__term {
+    margin: 0;
+    padding: 0;
   }
 
   // .card-order__button
   &__button {
-    margin-top:0;
-    margin-right:0;
+
     width: 119px;
     height: 32px;
   }
   // .card-order__wrapper
   &__wrapper:nth-child(2), &__wrapper:nth-child(3) {
-  grid-row: 2;
+    grid-row: 2;
   }
 
   &__wrapper:nth-child(3) {
     align-self: end;
     justify-self: end;
+
   }
 }
-
-
 

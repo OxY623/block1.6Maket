@@ -1,8 +1,8 @@
 …or create a new repository on the command line
 echo "# block1.6Maket" >> README.md
 git init
-git add README.md
-git commit -m "first commit"
+git add *
+git commit -m "Update all"
 git branch -M main
 git remote add origin https://github.com/OxY623/block1.6Maket.git
 git push -u origin main
