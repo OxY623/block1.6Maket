@@ -1,20 +1,18 @@
-// Импорт Swiper уже должен быть где-то выше в вашем коде, поэтому не нужно его повторять здесь
-
 // Инициализация swiper
-export function initSwiper(swiper) {
-  if (swiper) {
-    swiper.destroy();
+export function initSwiper(containerSelector) {
+
+  const existingSwiper = containerSelector.swiper;
+  if (existingSwiper) {
+    existingSwiper.destroy();
   }
 
-  // Создание нового экземпляра Swiper
-  const newSwiper = new Swiper(".mySwiper", {
+  const newSwiper = new Swiper(containerSelector, {
     loop: true,
     slidesPerView: "auto",
-    // slidesPerView: "1.2",
     spaceBetween: 16,
     slideToClickedSlides: true,
     pagination: {
-      el: ".swiper-pagination", // Используйте правильный селектор для пагинации
+      el: containerSelector.querySelector(".swiper-pagination"),
       clickable: true,
     },
     grabCursor: true,
@@ -23,9 +21,9 @@ export function initSwiper(swiper) {
       onlyInViewport: true,
       pageUpDown: true,
     },
-    mousewheel: {
-      sensitivity: 1,
-    },
+    // mousewheel: {
+    //   sensitivity: 1,
+    // },
     slideOverflow: true,
     breakpoints: {
       375: { spaceBetween: 18 },
@@ -36,15 +34,24 @@ export function initSwiper(swiper) {
     allowTouchMove: true,
   });
 
-  // Возвращаем новый экземпляр Swiper, чтобы его можно было использовать дальше при необходимости
+
+  containerSelector.swiper = newSwiper;
+  console.log(containerSelector.swiper.slides.length);
+
+
   return newSwiper;
 }
 
+
+
 export function handleScreenSize(swiper) {
   const screenSize = window.innerWidth;
-  if (swiper && screenSize > 767) {
-    swiper.allowTouchMove = false;
+  if (swiper && screenSize >= 768) {
+
+    swiper.pagination.clickable = false
+    swiper.slideToClickedSlides = false;
+    swiper.allowTouchMove=false;
     swiper.destroy();
-    // alert('Testing screen size');
+    swiper = null;
   }
 }

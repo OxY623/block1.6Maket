@@ -1,4 +1,3 @@
-// Создание карточек
 export function createCard(srcLogo, ariaLabel) {
   let card = document.createElement("li");
   let blockServices = document.querySelector(".block-services__cards-list");
@@ -19,5 +18,3 @@ export function createCard(srcLogo, ariaLabel) {
   img_icon.classList.add("block-services__icon");
   link.appendChild(img_icon);
 }
-
-

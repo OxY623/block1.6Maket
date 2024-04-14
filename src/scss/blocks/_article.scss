@@ -1,0 +1,137 @@
+.article {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 16px;
+  background-color: $color-background;
+  padding-bottom: 24px;
+
+  @include respond-to($min-width-small){
+    padding: 32px 24px 32px 0;
+    grid-template-columns:  1fr 1fr;
+    grid-gap: 0;
+    align-items: center;
+    justify-items: center;
+  }
+
+  @include respond-to($min-width-medium){
+    grid-template-columns:  1fr 1fr;
+    padding: 7px 29px 51px 0;
+    align-items: center;
+    justify-items: center;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+
+    @include respond-to(#{$min-width-small}) {
+      justify-content: center;
+    }
+
+    &--size {
+      @include article__content-padding;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 129%;
+      letter-spacing: 0.01em;
+      @include respond-to(#{$min-width-small}) {
+        align-self: flex-start;
+        flex: 1;
+        padding: 0 $spacing-large;
+      }
+
+      @include respond-to(#{$min-width-large}) {
+        min-width: 490px;
+        min-height: 160px;
+        padding: 0 $spacing-extra-large;
+      }
+    }
+  }
+
+  &__text {
+    font-size: $font-size-small;
+    text-align: left;
+    padding: 0;
+    margin: 0;
+    transition: max-height 0.5s ease-in-out;
+    max-height: 0;
+    overflow: hidden;
+
+    @include respond-to(#{$min-width-medium}) {
+      font-size: $font-size-small;
+      font-weight: $font-weight-normal;
+      line-height: 20px;
+      letter-spacing: 0.2px;
+      text-align: left;
+      max-height: 163px;
+      min-width: 312px;
+      overflow: hidden;
+
+      &.expanded {
+        max-height: initial;
+      }
+    }
+    @include respond-to(#{$min-width-large}) {
+      max-height: 160px;
+      flex-basis: 490px;
+      overflow: hidden;
+
+    }
+
+    @include respond-to(#{$min-width-large}) {
+      max-height: 160px;
+      flex-basis: 490px;
+      overflow: hidden;
+    }
+
+    &--size {
+      min-width: 288px;
+      max-height: 93px;
+      overflow: hidden;
+      justify-content: center;
+
+      @include respond-to(#{$min-width-small}) {
+        min-width: 294px;
+        max-height:159px;
+        font-weight: $font-weight-normal;
+        font-size: $font-size-small;
+        line-height: 145%;
+        letter-spacing: 0.01em;
+      }
+    }
+
+    &.expanded {
+      max-height: 390px;
+
+      @include respond-to($min-width-large) {
+        max-height: 198px;
+      }
+    }
+  }
+
+  &__button {
+    transition: all 0.5s ease-in-out;
+    opacity: 1;
+    @include ButtonPaddingTop;
+
+    &.expanded {
+      opacity: 1;
+    }
+  }
+
+  &__image {
+    border-radius: $border-radius-medium;
+    width: 100%;
+    height: auto;
+    z-index: 20;
+    transition: all 0.5s ease-in-out;
+
+    &.expanded {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+      animation: fadeIn 2s ease forwards;
+      animation-fill-mode: both;
+    }
+  }
+}

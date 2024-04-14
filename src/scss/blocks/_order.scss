@@ -1,0 +1,40 @@
+.order {
+  position: relative;
+  text-decoration: none;
+  all: initial;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 119px;
+  height: 32px;
+  padding: 0;
+  border-radius: 16px;
+  background: $pink;
+  color: $white;
+  font-family: $font-family-bold;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: $font-weight-bold;
+  font-size: $font-size-small;
+  letter-spacing: -0.01em;
+  text-align: center;
+  padding-left: 12px;
+
+
+  .order__text {
+    margin-left: $spacing-small;
+  }
+
+  .order__icon {
+    width: 24px;
+    height: 24px;
+    margin-left: 5px;
+  }
+
+  &:hover,
+  &:focus {
+    background: $white;
+    color: $pink;
+  }
+}

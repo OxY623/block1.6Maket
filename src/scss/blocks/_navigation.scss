@@ -1,0 +1,109 @@
+.navigation {
+  @include font-family($font-family-medium);
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  height: 60px;
+  white-space: nowrap;
+  display: flex;
+  overflow-x: auto;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  @include respond-to($min-width-medium){
+    overflow-x: initial;
+    height: 90px;
+  }
+
+  @include respond-to($min-width-large) {
+    overflow-x: initial;
+    height: 90px;
+  }
+
+  // .navigation__list
+  &__list {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    list-style: none;
+    align-items: center;
+    position: relative;
+    @include navigation-padding;
+    @include respond-to($min-width-medium) {
+      flex-wrap: wrap;
+      overflow-x: clip;
+      height: 90px;
+      overflow-y: visible;
+      margin-left: -2px;
+    }
+
+
+    @include respond-to($min-width-medium) {
+      overflow-y: visible;
+      flex-wrap: wrap;
+      overflow-x: clip;
+      height: 90px;
+    }
+  }
+
+  // .navigation__item
+  &__item {
+    margin: 0;
+    padding: 0;
+    align-items: center;
+
+    // .navigation__item--active
+    &--active {
+      border: 2px solid $color-secondary;
+      border-radius: $border-radius-medium;
+    }
+
+    &--hidden {
+      display: none;
+      @include respond-to($min-width-large) {
+        display: initial;
+      }
+
+    }
+  }
+
+  // .navigation__link
+  &__link {
+    display: block;
+    text-decoration: none;
+    color: $grey;
+    font-size: $font-size-medium;
+    font-weight: 500;
+    line-height: $spacing-large;
+    letter-spacing: -0.2px;
+    text-align: left;
+    padding: 8px 10px 8px 16px;
+
+
+
+    // .navigation__link--active
+    &--active {
+      color: $grey;
+      font-size: $font-size-medium;
+      font-weight: $font-weight-medium;
+      line-height: 24px;
+      letter-spacing: -0.2px;
+      text-align: left;
+    }
+
+    // .navigation__link--hidden
+    &--hidden {
+      @include respond-to($min-width-small){
+        display: none;
+      }
+      @include respond-to($min-width-medium){
+        display: block;
+      }
+    }
+    &--hidden-width-medium{
+      @include respond-to($min-width-medium){
+        display: block;
+      }
+
+    }
+  }
+}

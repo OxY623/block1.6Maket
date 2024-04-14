@@ -1,0 +1,61 @@
+.main {
+  padding-top: 88px;
+  position: relative;
+  @include respond-to($min-width-large){
+    padding-top: 0;
+  }
+  &::after {
+    z-index: 5;
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 19.31px;
+    height: 100%;
+    background: linear-gradient(270.00deg,
+      rgb(248, 248, 248) 16.836%, rgba(248, 248, 248, 0) 100%);
+    @include respond-to($min-width-small){
+      display: none;
+    }
+  }
+  // .main__header
+  &__header {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    background: $color-background;
+
+  }
+
+  // .main__wrapper
+  &__wrapper {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    margin-top: 12px;
+    @include responsive-padding-title;
+    @include responsive-padding;
+    @include respond-to($min-width-large){
+      justify-content: space-between;
+    }
+
+  }
+
+  // .main__title
+  &__title {
+  }
+
+  // .main__menu
+  &__menu {
+    display: none;
+    @include respond-to($min-width-large) {
+      display: flex;
+    }
+  }
+
+  // .main__section
+  &__section:not(.section--last) {
+    border-bottom: 2px solid rgb(217, 255, 245);
+  }
+}

@@ -1,7 +1,12 @@
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
 // Colors
 $color-primary: #42a5f5;
 $border-color: rgb(217, 255, 245);
-$color-secondary: #66bb6a;
+$color-secondary: #41f6d7;
 $color-background:  #f8f8f8;
 $color-text: #1B1C21;
 $white: rgb(255, 255, 255);
@@ -9,17 +14,26 @@ $pink: rgb(255, 62, 121);
 $grey: #7E7E82;
 $color-deliver: rgb(234, 234, 234);
 
+
 // Fonts
 //$font-family: 'TT Lakes';
 $font-family-regular: 'TT Lakes Regular';
 $font-family-medium: 'TT Lakes Medium';
 $font-family-bold: 'TT Lakes Bold';
-
-
+// Font weights
+$font-weight-normal: 400;
+$font-weight-medium: 500;
+$font-weight-bold: 700;
+//Padding
+$padding-small: 16px;
+$padding-medium: 24px;
+$padding-large: 32px;
+$margin-bottom-large: 50px;
 // Spacings
 $spacing-small: 8px;
 $spacing-medium: 16px;
 $spacing-large: 24px;
+$spacing-extra-large: 32px;
 
 // Border radius
 $border-radius-small: 4px;
@@ -31,20 +45,42 @@ $font-size-small: 14px;
 $font-size-medium: 16px;
 $font-size-large: 20px;
 
-// Font weights
-$font-weight-normal: 400;
-$font-weight-bold: 700;
-
 // Z-index
 $z-index-menu: 1000;
-$z-index-overlay: 2000;
+$z-index-overlay: 200;
 
 //URLS
 $url-image-icon-order: '../img/goside.svg';
 $url-image-icon-commercial-offer__link: '../img/line.svg';
 $url-image-icon-burger: "../img/burger.svg";
+$url-image-icon-burger-closed: "../img/burger_close.svg";
 $url-image-icon-call: "../img/call.svg";
 $url-image-icon-write: "../img/chat.svg";
 $url-image-icon-login: "../img/profile.svg";
 $url-image-icon-status: "../img/repair.svg";
 $url-image-icon-application: "../img/checkstatus.svg";
+$url-image-icon-search: "../img/search.svg";
+$url-image-icon-expand: "../img/expand.svg";
+
+// Size the window
+$min-width-small: 768px;
+$min-width-medium: 1120px;
+$min-width-large: 1440px;
+
+$spacing-medium: 16px;
+$spacing-small: 8px;
+$font-size-medium: 16px;
+$grey: #7e7e82;
+$font-size-small: 14px;
+$font-weight-normal: 400;
+
+//button:hover,
+//button:focus,
+//a:hover,
+//a:focus {
+//  transform: scale(1.05);
+//  filter: contrast(1.2);
+//  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+//  transition: transform 0.3s ease;
+//
+//}

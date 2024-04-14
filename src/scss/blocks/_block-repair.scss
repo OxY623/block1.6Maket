@@ -1,0 +1,143 @@
+.block-repair {
+  height: auto;
+  padding-bottom: 16px;
+  background: $color-background;
+
+  // Header
+  &__header {
+    width: 100%;
+    @include headerBlockPadding;
+    @include responsive-padding;
+  }
+
+
+  &__title {
+    margin: 0;
+    padding: 0;
+  }
+
+
+  &__container {
+    width: 100%;
+    overflow: hidden;
+
+    @include respond-to(#{$min-width-small}) {
+      padding-left: $spacing-large;
+      padding-right: $spacing-large;
+    }
+  }
+
+
+  &__wrapper {
+    margin-left: $spacing-medium;
+    transition: all 0.3s ease;
+
+    @include respond-to(#{$min-width-small}) {
+      margin-left: 0;
+      width: 100%;
+      display: grid !important;
+      grid-template-columns: repeat(auto-fill, 224px);
+      grid-column-gap: 24px;
+      grid-row-gap: 16px;
+      @include respond-to($min-width-large){
+        grid-template-columns: repeat(auto-fill, 240px);
+        grid-column-gap: 32px;
+      }
+      max-height: 166px;
+    }
+
+    &.expanded {
+      overflow: visible;
+      max-height: initial;
+    }
+  }
+
+  &__item {
+    width: 240px;
+    margin: 0;
+    padding: 0;
+
+    @include respond-to(#{$min-width-small}) {
+      width: 224px !important;
+      @include respond-to($min-width-large){
+        width: 240px !important;
+      }
+    }
+  }
+
+
+  &__link {
+    text-decoration: none;
+    box-sizing: border-box;
+    display: flex;
+    width: 240px;
+    height: 160px;
+    background: #FFFFFF;
+    border: 1px solid $color-deliver;
+    border-radius: $border-radius-medium;
+    background: $white;
+    padding: $spacing-medium;
+    flex-direction: column;
+    justify-content: space-between;
+    background: $white;
+    transition: transform 0.3s ease;
+
+
+    &:focus, &:hover {
+      filter: contrast(1.2);
+      box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
+      background-image: linear-gradient(to right, rgba(39, 236, 9, 0.1), rgba(39, 236, 9, 0.3));
+      transition: transform 0.3s ease;
+      z-index:5;
+    }
+
+    @include respond-to(#{$min-width-small}) {
+      width: 224px;
+    }
+
+    @media screen and (min-width: $min-width-large) {
+      width: 240px;
+    }
+  }
+
+
+  &__icon {
+    width: 40px;
+    height: 40px;
+    transform: translateX(414%);
+
+    @include respond-to(#{$min-width-small}) {
+      transform: translateX(380%);
+    }
+  }
+
+
+  &__pagination {
+    position: static;
+    margin: 0 auto;
+  }
+
+
+  &__button {
+    display: none;
+
+    @include respond-to(#{$min-width-small}) {
+      display: flex;
+      padding-left: $spacing-large;
+      margin-top: $spacing-medium;
+      overflow: visible;
+    }
+  }
+
+  &__cards-list.expanded {
+    padding-top: $spacing-extra-large;
+    overflow: visible;
+  }
+}
+
+
+
+
+
+
+

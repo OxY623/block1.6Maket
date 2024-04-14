@@ -1,0 +1,113 @@
+.menu {
+
+  &--secondary {
+
+  }
+
+  // .menu__list
+  &__list {
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  // .menu__item
+  &__item {
+    margin: 0;
+    padding: 0;
+    // .menu__item--hidden-link
+    &--hidden-link {
+    }
+  }
+
+  // .menu__link
+  &__link {
+    display: flex;
+    text-decoration: none;
+    color: $color-text;
+    font-weight: 500;
+    line-height: $spacing-large;
+    letter-spacing: -0.2px;
+    text-align: left;
+
+    align-items: center;
+
+
+    &:hover,
+    &:focus {
+      transform: scale(1.05);
+      filter: contrast(1.2);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+
+    }
+
+
+    // .menu__link--call
+    &--call {
+      background-image: url("#{$url-image-icon-call}");
+
+    }
+
+    // .menu__link--write
+    &--write {
+      background-image: url("#{$url-image-icon-write}");
+
+    }
+
+    // .menu__link--login
+    &--login {
+      background-image: url("#{$url-image-icon-login}");
+    }
+  }
+
+  // .menu__button
+  &__button {
+    display: flex;
+    cursor: pointer;
+    @include respond-to($min-width-large){
+      position: relative;
+      all: unset;
+      cursor: pointer;
+      width: 168px;
+      height: 40px;
+      font-family: $font-family-medium;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 150%;
+      letter-spacing: -0.01em;
+      text-align: right;
+      color: #1b1c21;
+      padding-right: 49px;
+
+
+    }
+    &:hover,
+    &:focus {
+      transform: scale(1.05);
+      filter: contrast(1.2);
+      transition: transform 0.3s ease;
+
+    }
+    // .menu__button--status
+    &--status {
+      background-image: url("#{$url-image-icon-status}");
+      @include respond-to($min-width-large){
+        background-repeat: no-repeat;
+        background-position: right;
+      }
+    }
+
+    // .menu__button--application
+    &--application {
+      background-image: url("#{$url-image-icon-application}");
+      @include respond-to($min-width-large){
+        background-repeat: no-repeat;
+        background-position: right;
+      }
+    }
+  }
+}

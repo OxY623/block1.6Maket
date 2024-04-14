@@ -1,0 +1,196 @@
+@mixin panel-block-padding {
+  @media (min-width: 320px) {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  @media (min-width: 360px) {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+
+  @media (min-width: 768px) {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+  @media (min-width: 1120px) {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}
+
+@mixin responsive-padding {
+
+  padding-left: 16px;
+  padding-right: 16px;
+
+
+  @media (min-width: 768px) {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+
+  @media (min-width: 1440px) {
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+}
+
+@mixin flex-row {
+  display: flex;
+  flex-direction: row;
+}
+
+@mixin center-children {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin responsive-padding-title {
+  @media (min-width: 320px) {
+    padding-top: 15px;
+    padding-bottom: 15px;
+
+  }
+
+  @media (min-width: 768px) {
+    padding-top: 15px;
+    padding-bottom: 15px;
+
+  }
+
+  @media (min-width: 1120px) {
+    padding-top: 15px;
+    padding-bottom: 15px;
+
+  }
+}
+
+@mixin font-family($font-family) {
+  font-family: $font-family;
+}
+
+@mixin respond-to($breakpoint) {
+  @media (min-width: $breakpoint) {
+    @content;
+  }
+}
+
+@mixin paddingWay($top-bottom, $left-right) {
+  padding: $top-bottom $left-right $top-bottom $left-right;
+}
+
+@mixin size($width, $height) {
+  width: $width;
+  height: $height;
+}
+
+@mixin padding($value) {
+  padding: $value;
+}
+
+@mixin navigation-padding {
+  padding-left: 16px;
+
+  @media (min-width: $min-width-small) {
+    padding-left: 28px;
+  }
+
+  @media (min-width: $min-width-large) {
+    padding-left: 32px;
+  }
+}
+
+@mixin border-radius($radius) {
+  border-radius: $radius;
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+}
+
+@mixin size($width, $height) {
+  width: $width;
+  height: $height;
+}
+
+@mixin article__content-padding {
+
+  padding: 24px 13px 0 19px;
+
+  @media ($min-width-small) {
+    padding: 32px 48px 0px 28px;
+  }
+
+  @media ($min-width-large) {
+    padding: 17px 36px 0 34px;
+  }
+}
+
+@mixin ButtonPaddingTop {
+  margin-top: 14px;
+
+  @media ($min-width-small) {
+    padding-top: 10px;
+  }
+
+  @media ($min-width-large) {
+    padding-top: 14px;
+  }
+
+}
+
+@mixin articlePadding {
+  padding: 16px 0 0 0;
+
+  @media (768px) {
+    padding: 32px 56px 0 0;
+  }
+
+  @media (1440px) {
+    padding: 7px 29px 0 0;
+
+  }
+}
+
+@mixin box-shadow-large {
+  box-shadow: 16px 0 52px 0 rgba(14, 24, 80, 0.2), -2px 0px 4px 0px rgba(69, 79, 126, 0.02);
+}
+
+@mixin headerBlockPadding{
+  padding: 16px;
+
+  @media (min-width: 768px) {
+    padding: 16px 24px;
+  }
+
+  @media (min-width: 1120px) {
+    padding: 16px 32px;
+
+  }
+}
+
+@mixin paddingLeftBlock {
+  padding-left: 16px;
+
+  @media (min-width: 768px) {
+    padding-left: 24px;
+  }
+
+  @media (min-width: 1440px) {
+    padding-left: 16px;
+  }
+}
+
+@mixin paddingRightBlock {
+  padding-right: 16px;
+
+  @media (min-width: 768px) {
+    padding-right: 24px;
+  }
+
+  @media (min-width: 1440px) {
+    padding-right: 16px;
+  }
+}
+
+

@@ -1,0 +1,14 @@
+.logo {
+  display: block;
+
+  // .logo__link
+  &__link {
+    display: block;
+  }
+
+  // .logo__image
+  &__image {
+    width: 97px;
+    height: 51px;
+  }
+}

@@ -1,0 +1,166 @@
+.card-order {
+  @include size(260px, 200px);
+  @include padding($spacing-medium);
+  border-radius: $border-radius-medium;
+  background: $white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  @include respond-to($spacing-small){
+    height: 66px;
+  };
+
+  // .card-order__container
+  &__container {
+    color: $color-text;
+    font-size: $font-size-small;
+    font-weight: $font-weight-normal;
+    line-height: 15px;
+    letter-spacing: 0.2px;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    font-weight: 400;
+    font-size: 14px;
+    letter-spacing: 0.01em;
+    @include respond-to($min-width-small){
+      text-align: left;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      width: 100%;
+      text-align: left !important;
+
+    }
+
+  }
+
+  // .card-order__header
+  &__header {
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 228px;
+    height: 56px;
+    @include respond-to($min-width-small){
+      @include center-children;
+      flex-wrap: nowrap;
+      width: 300px;
+      align-items: start;
+    }
+  }
+
+  // .card-order__title, .card-order__subtitle
+  &__title, &__subtitle  {
+    margin: 0;
+    font-family: $font-family-medium;
+    color: $grey;
+    font-size: $font-size-small;
+    font-weight: 500;
+    line-height: 16px;
+    letter-spacing: 0px;
+    padding-bottom: $spacing-small;
+    @include respond-to($min-width-small){
+      align-items: start;
+    }
+
+  }
+
+  // .card-order__description
+  &__description {
+    margin: 0;
+    padding: 0;
+    @include respond-to($min-width-small){
+      text-align: left !important;
+    }
+  }
+
+  // .card-order__body
+  &__body {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    grid-template-rows: 38px 42px;
+    gap: $spacing-medium;
+    margin-top: $spacing-medium;
+    @include respond-to($min-width-small){
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      justify-content: flex-start;
+      @include center-children;
+      text-align: left !important;
+      margin-top: 0;
+
+    }
+  }
+
+  // .card-order__price
+  &__price {
+    grid-row: 1;
+    margin: 0;
+    padding: 0;
+  }
+
+  // .card-order__term
+  &__term {
+    margin: 0;
+    padding: 0;
+  }
+
+  // .card-order__button
+  &__button {
+    @include size(119px, 32px);
+    @include respond-to($min-width-small){
+      margin-top: 11px;
+    }
+  }
+
+  // .card-order__wrapper
+  &__wrapper:nth-child(2), &__wrapper:nth-child(3) {
+    grid-row: 2;
+    @include respond-to($min-width-small){
+      @include center-children;
+    }
+  }
+
+  &__wrapper:nth-child(3) {
+    align-self: end;
+    justify-self: end;
+    @include respond-to($min-width-small){
+      align-self: start;
+      justify-self: start;
+      @include center-children;
+    }
+  }
+}
+//Table
+@include respond-to($min-width-small){
+  .block-prices__cards .card-order:first-child p{
+    display: none;
+  }
+  .block-prices__cards .card-order:first-child {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 114%;
+    color: #7e7e82;
+    background: $color-background;
+  }
+  .block-prices__cards .card-order:first-child .card-order__button {
+    opacity: 0;
+  }
+
+  .block-prices__cards .card-order:not(:first-child) h4{
+    display: none;
+  }
+  .block-prices__cards .card-order:not(:first-child)::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 13px;
+    width: 97%;
+    height: 1px;
+    background-color: #eaeaea;
+  }
+}
+

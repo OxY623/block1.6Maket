@@ -1,0 +1,188 @@
+.repair-services {
+  height: auto;
+  padding-bottom: 16px;
+  background: $color-background;
+  border-bottom: none;
+  // .repair-services__header
+  &__header {
+    width: 100%;
+    @include headerBlockPadding;
+    @include responsive-padding;
+    font-weight: $font-weight-medium;
+    font-size: 14px;
+    line-height: 114%;
+    color: $grey;
+    text-align: left;
+    // .repair-services__header--name
+    &--name {
+    }
+
+    // .repair-services__header--price
+    &--price {
+    }
+
+    // .repair-services__header--duration
+    &--duration {
+    }
+  }
+
+  // .repair-services__title
+  &__title {
+    margin: 0;
+    padding: 0;
+  }
+
+  // .repair-services__table-title
+  &__table-title {
+    display: none;
+    @include respond-to(#{$min-width-small}) {
+      display: grid;
+      grid-template-columns: 1fr 13% 35%;
+
+    }
+  }
+
+  // .repair-services__wrap
+  &__wrap {
+    @include respond-to(#{$min-width-small}) {
+      display: grid;
+      grid-template-columns: 40% 60%;
+    }
+  }
+
+  // .repair-services__swiper
+  &__swiper {
+    @include respond-to(#{$min-width-small}) {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+  }
+
+  // .repair-services__wrapper
+  &__wrapper {
+    @include paddingLeftBlock;
+    @include respond-to(#{$min-width-small}) {
+      @include responsive-padding;
+      display: grid;
+      width: 100%;
+      grid-template-columns: 1fr;
+    }
+  }
+
+  // .repair-services__card
+  &__card {
+    @include respond-to(#{$min-width-small}) {
+      display: grid;
+      width: 100%;
+      //grid-template-columns: repeat(3, minmax(250px, 1fr));
+      grid-template-columns: 1fr 11% 33%;;
+      padding: 16px;
+
+      &::after{
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 13px;
+      width: 97%;
+      height: 1px;
+      background-color: #eaeaea;
+    }
+    }
+  }
+}
+
+.card {
+  @include size(260px, 200px);
+  @include padding($spacing-medium);
+  border-radius: $border-radius-medium;
+  background: $white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap:16px;
+  height: 200px;
+  width: 260px;
+  @include respond-to($min-width-small){
+    height: 66px;
+    width: 100%;
+  };
+
+  // .card__item
+  &__item {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    @include center-children;
+    align-items: baseline;
+    // .card__item--name
+    &--name {
+    }
+
+    // .card__item--price
+    &--price {
+    }
+
+    // .card__item--duration
+    &--duration {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      @include respond-to($min-width-small){
+        display: grid;
+        grid-template-columns: 40% 60%;
+      }
+    }
+  }
+
+  // .card__title
+  &__title {
+    font-weight:$font-weight-medium;
+    font-size: 14px;
+    line-height: 114%;
+    color: $grey;
+    opacity: 0.72;
+    @include respond-to($min-width-small){
+      display: none;
+    }
+  }
+
+  // .card__price
+  &__price {
+    font-weight:$font-weight-normal;
+    font-size: 14px;
+    line-height: 129%;
+    letter-spacing: 0.01em;
+    color: $color-text;
+  }
+
+  // .card__btn
+  &__btn {
+  }
+}
+
+
+@include respond-to(768px){
+  .repair-services__card {
+    display: grid;
+    width: 100%;
+    //grid-template-columns: repeat(3, minmax(250px, 1fr));
+    grid-template-columns: 1fr 11% 33%;;
+    padding: 16px;
+  }
+
+  //.card__item {
+  //  margin-bottom: 10px;
+  //}
+
+  //.card__item-time{
+  //  display: flex;
+  //  flex-direction: row;
+  //}
+
+  //.card__title {
+  //  margin-bottom: 5px;
+  //  font-weight: bold;
+  //}
+
+}

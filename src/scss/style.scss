@@ -1,43 +1,31 @@
 //Base styles
 @import './base/_variables.scss';
+@import './base/mixin.scss';
 @import './base/_typography.scss';
 @import './base/_normalize.scss';
 @import './base/_reset.scss';
-//Header styles
-@import 'blocks/deliver/deliver.scss';
-@import 'blocks/round-icon/_round-icon.scss';
-@import 'blocks/menu/_menu.scss';
-@import 'blocks/header/_header.scss';
-//Main styles
-@import 'blocks/main/_main.scss';
-@import 'blocks/navigation/_navigation.scss';
-@import 'blocks/block-services/_block-services.scss';
-@import 'blocks/block-repair/_block-repair.scss';
-@import 'blocks/article/_article.scss';
-@import 'blocks/card-order/_card-order.scss';
-@import 'blocks/button-icon/_button-icon.scss';
-@import 'blocks/additional-services/_additional-services.scss';
-@import 'blocks/block-prices/_block-prices.scss';
-//Footer styles
-@import 'blocks/footer/_footer.scss';
+@import 'blocks/round-icon';
+@import './blocks/page.scss';
+@import './blocks/_logo.scss';
+@import './blocks/_navigation.scss';
+@import './blocks/_menu.scss';
+@import './blocks/_order.scss';
+@import './blocks/_delivery.scss';
+@import './blocks/_info.scss';
+@import './blocks/_button-primary.scss';
+@import './blocks/_swiper.scss';
+//Panel-block
+@import './blocks/_panel-block.scss';
+//Header
+@import './blocks/_header.scss';
+//Main
+@import './blocks/_main.scss';
+@import './blocks/_article.scss';
+@import 'blocks/_block-services.scss';
+@import 'blocks/_block-repair.scss';
+@import 'blocks/_commercial-offer.scss';
+@import 'blocks/_repair-services.scss';
 
-
-//Order styles
-@import 'blocks/order/_order.scss';
-
-//Card-order styles
-
-
-//Commercial-offer
-@import 'blocks/commercial-offer/_commercial-offer.scss';
-
-//Services-menu styles
-@import 'blocks/services-menu/_services-menu.scss';
-
-//Swiper styles
-@import 'blocks/swiper/_swiper.scss';
-
-
-
-
-
+//Footer
+@import './blocks/_footer.scss';
+@import "./blocks/_aside.scss";
