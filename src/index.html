@@ -458,7 +458,7 @@
     <div class='dialog-box__content'>
       <h2 class='dialog-box__title'>Заказать звонок</h2>
       <form class='dialog-box__form form' action='#' method='POST'>
-        <input class='form__input' type='tel' name='tel' placeholder='Телефон' maxlength='13' required>
+        <input class='form__input' type='tel' name='tel' placeholder='Телефон' maxlength='13' pattern='^\+7 \(\d{3}\) \d{3}-\d{2}-\d{2}$' required>
         <p class='form__text text'>
           Нажимая “отправить”, вы даете согласие на <span class='text text--pink'>обработку персональных данных</span> и
           соглашаетесь с нашей
@@ -478,8 +478,8 @@
     <div class='dialog-box__content feedback'>
       <h2 class='dialog-box__title'>Обратная связь</h2>
       <form class='dialog-box__form form' action='#' method='POST'>
-        <input class='form__input' type='text' name='name' placeholder='Имя' maxlength='30' required>
-        <input class='form__input form__input--tel' type='tel' name='tel' placeholder='Телефон' maxlength='13'>
+        <input class='form__input' type='text' name='name' placeholder='Имя' minlength='3' maxlength='30' required>
+        <input class='form__input form__input--tel' type='tel' name='tel' placeholder='Телефон' maxlength='13' pattern='^\+7 \(\d{3}\) \d{3}-\d{2}-\d{2}$'>
         <input class='form__input form__input--email' type='email' name='email' placeholder='Электронная почта'
                maxlength='50'>
         <textarea class='form__input form__input--message' name='message' rows='4' placeholder='Сообщение'></textarea>
