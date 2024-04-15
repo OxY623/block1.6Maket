@@ -749,7 +749,8 @@ h3 {
   font-size: 16px;
   line-height: 150%;
   letter-spacing: -0.01em;
-  color: #1b1c21; }
+  color: #1b1c21;
+  transition: all 0.3s ease; }
   .panel-block--fixed {
     position: fixed;
     top: 0;
