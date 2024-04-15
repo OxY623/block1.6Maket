@@ -1631,6 +1631,12 @@ h3 {
       .repair-services__table-title {
         display: grid;
         grid-template-columns: 1fr 13% 35%; } }
+  @media (min-width: 768px) and (min-width: 1024px) {
+    .repair-services__table-title {
+      grid-template-columns: 1fr 11% 25%; } }
+  @media (min-width: 768px) and (min-width: 1440px) {
+    .repair-services__table-title {
+      grid-template-columns: 1fr 11% 23%; } }
   @media (min-width: 768px) {
     .repair-services__wrap {
       display: grid;
@@ -1668,7 +1674,14 @@ h3 {
       display: grid;
       width: 100%;
       grid-template-columns: 1fr 11% 33%;
-      padding: 16px; }
+      padding: 16px; } }
+  @media (min-width: 768px) and (min-width: 1024px) {
+    .repair-services__card {
+      grid-template-columns: 1fr 11% 25%; } }
+  @media (min-width: 768px) and (min-width: 1440px) {
+    .repair-services__card {
+      grid-template-columns: 1fr 11% 23%; } }
+  @media (min-width: 768px) {
       .repair-services__card::after {
         content: '';
         position: absolute;
@@ -1732,6 +1745,12 @@ h3 {
     width: 100%;
     grid-template-columns: 1fr 11% 33%;
     padding: 16px; } }
+  @media (min-width: 768px) and (min-width: 1024px) {
+    .repair-services__card {
+      grid-template-columns: 1fr 11% 25%; } }
+  @media (min-width: 768px) and (min-width: 1440px) {
+    .repair-services__card {
+      grid-template-columns: 1fr 11% 23%; } }
 
 .footer {
   background: #f8f8f8;
