@@ -43,18 +43,18 @@ document.addEventListener('DOMContentLoaded', () => {
   initializeSwipers();
 
   // Обработчики кнопок
-  const toggleExpanded = (element, buttonText) => {
+  const toggleExpanded = (element, button, buttonText) => {
     element.classList.toggle('expanded');
-    button.textContent = element.classList.contains('expanded') ? 'Скрыть' : buttonText;
     button.classList.toggle('expanded');
+    button.textContent = element.classList.contains('expanded') ? 'Скрыть' : buttonText;
   };
 
-  button.addEventListener('click', () => toggleExpanded(blockServices, 'Показать все'));
+  button.addEventListener('click', () => toggleExpanded(blockServices, button, 'Показать все'));
   button2.addEventListener('click', () => {
-    toggleExpanded(blockArticle, 'Читать далее');
+    toggleExpanded(blockArticle, button2, 'Читать далее');
     blockIMG.classList.toggle('expanded');
   });
-  button3.addEventListener('click', () => toggleExpanded(blockRepairWrapper, 'Показать все'));
+  button3.addEventListener('click', () => toggleExpanded(blockRepairWrapper, button3, 'Скрыть'));
 
   // Обработчики бургер-меню
   const toggleAsideElement = (event) => {
@@ -103,7 +103,9 @@ document.addEventListener('DOMContentLoaded', () => {
     if (!callDialog.contains(event.target) && !statusButton.contains(event.target) && !statusButton2.contains(event.target)) {
       closeCallDialog();
     }
-    if (!feedbackDialog.contains(event.target) && !applicationButton.contains(event.target) && !applicationButton2.contains(event.target)) {
+    if (!feedbackDialog.contains(event.target) &&
+      !applicationButton.contains(event.target) &&
+      !applicationButton2.contains(event.target)) {
       closeFeedbackDialog();
     }
   });
