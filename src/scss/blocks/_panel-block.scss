@@ -84,6 +84,7 @@
 
   &__close-button {
     background-image: url($url-image-icon-burger-closed);
+
     @include respond-to($min-width-large) {
       display: none;
     }
@@ -107,7 +108,6 @@
       filter: contrast(1.2);
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
       transition: transform 0.3s ease;
-
     }
   }
 }
@@ -134,6 +134,12 @@
     text-align: left;
     @include panel-block-padding;
     padding-bottom: 24px;
+    transition: all 0.3s ease;
+
+    &:hover,
+    &:focus {
+      color: $pink;
+    }
 
     &--active {
       color: $grey;
@@ -143,6 +149,12 @@
       letter-spacing: -0.2px;
       text-align: left;
       cursor: not-allowed;
+
+      &:hover,
+      &:focus {
+        color: $grey;
+        transform: scale(1);
+      }
 
       &::before {
         content: "";
@@ -165,6 +177,16 @@
 
 .language {
   &__button {
+    all: unset;
+    cursor: pointer;
+    background: white;
+    color: $color-text;
+    transition: all 0.3s ease;
+    &:hover,
+    &:focus {
+      transform: scale(1.1);
+    }
+
   }
 }
 

@@ -77,6 +77,13 @@
     letter-spacing: -0.2px;
     text-align: left;
     padding: 8px 10px 8px 16px;
+    transition: all 0.3s ease;
+
+    &:hover,
+    &:focus {
+      color: $pink;
+      transform: scale(1.1);
+    }
 
 
 
@@ -88,6 +95,13 @@
       line-height: 24px;
       letter-spacing: -0.2px;
       text-align: left;
+      cursor: not-allowed;
+
+      &:hover,
+      &:focus {
+        color: $grey;
+        transform: scale(1);
+      }
     }
 
     // .navigation__link--hidden

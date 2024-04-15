@@ -55,7 +55,7 @@
   }
 
   // .main__section
-  &__section:not(.section--last) {
+  &__section:not(.repair-services--none) {
     border-bottom: 2px solid rgb(217, 255, 245);
   }
 }

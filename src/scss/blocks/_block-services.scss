@@ -83,6 +83,7 @@
     padding: 0;
     margin: 0;
     list-style: none;
+    position: relative;
 
     ::after {
       display: none;
@@ -113,6 +114,16 @@
     border-radius: $border-radius-medium;
     background-repeat: no-repeat;
     background-position: 10% center;
+    transition: all 0.3s ease;
+
+    &:hover,
+    &:focus {
+      border: 1px solid $color-secondary;
+      background-image: linear-gradient(to right, $color-primary, $color-secondary);
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.2) inset;
+
+
+    }
 
     @media screen and (min-width: $min-width-small) {
       @include size(224px, auto);

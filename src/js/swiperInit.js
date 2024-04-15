@@ -1,4 +1,4 @@
-// Инициализация swiper
+
 export function initSwiper(containerSelector) {
 
   const existingSwiper = containerSelector.swiper;
