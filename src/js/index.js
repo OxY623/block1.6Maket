@@ -19,13 +19,16 @@ document.addEventListener('DOMContentLoaded', () => {
     blockArticle: document.querySelector('.article__text--size'),
     button3: document.querySelector('.block-repair__button'),
     blockRepairWrapper: document.querySelector('.block-repair__wrapper'),
-    statusButton: document.getElementById('status'),
-    applicationButton: document.getElementById('application'),
-    statusButton2: document.getElementById('status2'),
-    applicationButton2: document.getElementById('application2'),
+    writeButton: document.getElementById('call2'),
+    callButton: document.getElementById('write2'),
+    writeButton2: document.getElementById('write'),
+    callButton2: document.getElementById('call'),
     callDialog: document.querySelector('.dialog-box--call'),
     feedbackDialog: document.querySelector('.dialog-box--feedback'),
     asideElement2: document.querySelector('.dialog-box'),
+    blurOverlay: document.querySelector('.blur-overlay'),
+    dialogBoxCallCloseButton: document.getElementById('dialog-box-call-close'),
+    dialogBoxFeedbackCloseButton: document.getElementById('dialog-box-feedback-close'),
   };
 
   dataCardList.forEach(({ url, ariaLabel }) => createCard(url, ariaLabel));
@@ -53,69 +56,43 @@ document.addEventListener('DOMContentLoaded', () => {
   });
   elements.button3.addEventListener('click', () => toggleExpanded(elements.blockRepairWrapper, elements.button3, 'Скрыть'));
 
-
-  const toggleAsideElement = (event) => {
-    event.stopPropagation();
-    elements.asideElement.classList.toggle('visually-hidden');
+  const closeSidebar = (sidebar) => {
+    sidebar.classList.add('visually-hidden');
+    elements.blurOverlay.classList.add('visually-hidden');
   };
 
-  elements.burgerOpen.addEventListener('click', toggleAsideElement);
-  elements.burgerClose.addEventListener('click', toggleAsideElement);
-  document.addEventListener('click', event => {
-    const isClickInsideMenu = elements.asideElement.contains(event.target) || elements.burgerOpen.contains(event.target) || elements.burgerClose.contains(event.target);
-    const isMenuVisible = !elements.asideElement.classList.contains('visually-hidden');
-    if (!isClickInsideMenu && isMenuVisible) {
-      elements.asideElement.classList.add('visually-hidden');
-    }
-  });
-
-  function openDialog(dialog) {
-    dialog.classList.remove('visually-hidden');
+  const openSidebar= (sidebar) => {
+    sidebar.classList.remove('visually-hidden');
+    elements.blurOverlay.classList.remove('visually-hidden');
   }
-
-  function closeDialog(dialog) {
-    dialog.classList.add('visually-hidden');
-  }
-
-  const closeButtons = document.querySelectorAll('.dialog-box__close-btn');
-  closeButtons.forEach(button => {
-    button.addEventListener('click', function() {
-      const dialog = this.closest('.dialog-box');
-      closeDialog(dialog);
-    });
-  });
-
-
-  function openFeedbackDialog() {
-    openDialog(elements.feedbackDialog);
-  }
-
-  function openCallDialog() {
-    openDialog(elements.callDialog);
-  }
-
-  function closeFeedbackDialog() {
-    closeDialog(elements.feedbackDialog);
-  }
-
-  function closeCallDialog() {
-    closeDialog(elements.callDialog);
-  }
-
-
-  elements.statusButton.addEventListener('click', openCallDialog);
-  elements.applicationButton.addEventListener('click', openFeedbackDialog);
-  elements.statusButton2.addEventListener('click', openCallDialog);
-  elements.applicationButton2.addEventListener('click', openFeedbackDialog);
 
   document.addEventListener('click', event => {
-    if (!elements.callDialog.contains(event.target) && !elements.statusButton.contains(event.target) && !elements.statusButton2.contains(event.target)) {
-      closeCallDialog();
-    }
-    if (!elements.feedbackDialog.contains(event.target) && !elements.applicationButton.contains(event.target) && !elements.applicationButton2.contains(event.target)) {
-      closeFeedbackDialog();
+    if (event.target === elements.burgerOpen) {
+      openSidebar(elements.asideElement);
+    } else if (event.target === elements.burgerClose) {
+      closeSidebar(elements.asideElement);
+    } else if (event.target === elements.callButton || event.target === elements.callButton2) {
+      openDialogAndCloseOthers(elements.callDialog);
+    } else if (event.target === elements.writeButton || event.target === elements.writeButton2) {
+      openDialogAndCloseOthers(elements.feedbackDialog);
+    } else if (event.target === elements.dialogBoxCallCloseButton) {
+      closeSidebar(elements.callDialog);
+    } else if (event.target === elements.dialogBoxFeedbackCloseButton) {
+      closeSidebar(elements.feedbackDialog);
+    } else if (event.target === elements.blurOverlay) {
+      closeSidebar(elements.callDialog);
+      closeSidebar(elements.feedbackDialog);
+      closeSidebar(elements.asideElement);
     }
   });
+
+  function openDialogAndCloseOthers(dialogElement) {
+    // Close all dialog boxes
+    closeSidebar(elements.asideElement)
+    closeSidebar(elements.callDialog);
+    closeSidebar(elements.feedbackDialog);
+    openSidebar(dialogElement);
+  }
 
   window.addEventListener('resize', initializeSwipers);
 });

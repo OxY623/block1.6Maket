@@ -119,7 +119,6 @@
     &:hover,
     &:focus {
       border: 1px solid $color-secondary;
-      background-image: linear-gradient(to right, $color-primary, $color-secondary);
       box-shadow: 0 0 5px rgba(0, 0, 0, 0.2) inset;
 
 

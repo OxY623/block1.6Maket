@@ -1,126 +1,20 @@
-# Webpack Static Site Starter Kit
+# Практическая задача 6: "Верстка адаптивного макета"
 
-## Требования к проекту
+## Описание
 
-- [Node 14.18.3](https://nodejs.org/download/release/v14.18.3/)
-- [NVM/MacOC](https://tecadmin.net/install-nvm-macos-with-homebrew/)
-- [NVM/Windows](https://github.com/coreybutler/nvm-windows/releases) Если Windows то установка только от имени администратора
-- [Yarn](https://yarnpkg.com/)
+Проект представляет собой адаптивную верстку веб-страницы в соответствии с макетом, предоставленным в Figma. Верстка осуществляется с использованием HTML, SCSS и JavaScript. Проект включает интерактивные элементы, такие как мобильное меню, модальные окна, кнопки показа/скрытия элементов и слайдеры.
 
----
+## Функциональность
 
-## Использование
+- Мобильное меню раскрывается при клике на кнопку "бургер" в шапке. На планшетах меню закрывается при нажатии на кнопку или на "заблюренную" область.
+- При клике на кнопку "Показать все" раскрывается более полный список элементов.
+- Для слайдеров используется указанный модуль. Слайдер инициируется в зависимости от начальной ширины экрана.
+- По клику на кнопку с трубкой открывается модальное окно "заказать звонок".
+- По клику на кнопку с сообщением открывается модальное окно "обратная связь".
 
-Клонировать репозиторий
 
-```bash
-git clone https://github.com/alex-karo/webpack-static-template block7
-```
+## Дополнительная информация
 
-В папке block7 перейти в папку проекта
-
-```bash
-cd block7
-```
-
-Удалить папку .git
-
-```bash
-rm -rf .git
-```
-
----
-
-## Если создаете новый проект в github.com
-
-нужно будет инициализировать git проект, _если данная команда не сработает значит версия git установлена старая, нужно обновить её_
-
-```properties
-git init -b main
-```
-
-добавить все изменения и сделать первый коммит
-
-```properties
-git add . && git commit -m "initial commit"
-```
-
-соединить git удаленный с локальным, *USER* (пользователь) и *REPO* (репозиторий)
-
-```properties
-git remote add origin https://github.com/USER/REPO.git
-```
-
-проверить на то что есть соединение
-
-```properties
-git remote -v
-```
-
-отправить изменения в удаленный репозиторий
-
-```properties
-git push origin main
-```
-
----
-
-## Проверка версии ноды
-
-Должно вывести версию ноды 14.18.3
-
-```properties
-node -v
-```
-
----
-
-## Два метода установки зависимостей
-
-Установка зависимостей через NPM
-
-```properties
-npm install
-```
-
-Установка зависимостей через Yarn
-
-```properties
-yarn
-```
-
----
-
-## Два метода запуска приложения
-
-Для запуска веб-сервера через NPM
-
-```properties
-npm run start
-```
-
-Для запуска веб-сервера через Yarn
-
-```properties
-yarn start
-```
-
----
-
-## Два метода загрузки на Github Pages
-
-### Ваш репозиторий должен быть связан с github.com репозиторием, после этого выполняем
-
-Загрузка на Github Pages через NPM
-
-```properties
-npm run deploy
-```
-
-Загрузка на Github Pages через Yarn
-
-```properties
-yarn deploy
-```
-
-Основано на [этой статье](https://hackernoon.com/lets-start-with-webpack-4-91a0f1dba02e)
+- Репозиторий проекта на GitHub: https://github.com/OxY623/block1.6Maket
+- GitHub Pages: https://oxy623.github.io/block1.6Maket/
+- Макет: https://www.figma.com/file/ttlPwrOE9PxIpxl3FqkIT1/%D0%92%D0%B5%D1%80%D1%81%D1%82%D0%BA%D0%B0-%D0%BF%D1%80%D0%B8%D0%B5%D0%BC%D0%BB%D0%B5%D0%BC%D0%BE%D0%B3%D0%BE-%D0%BC%D0%B0%D0%BA%D0%B5%D1%82%D0%B0?node-id=0%3A312&t=e5yhwOwhdBAmAWN0-1

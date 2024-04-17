@@ -1,12 +1,11 @@
 .panel-block {
   @include box-shadow-large;
   width: auto;
-  max-width: 360px;
   height: 100%;
   background: $white;
   overflow-y: auto;
   font-family: $font-family-medium;
-  width: 320px;
+  max-width: 360px;
   font-weight: 500;
   font-size: 16px;
   line-height: 150%;
@@ -19,12 +18,17 @@
     top: 0;
     left: 0;
     right: 0;
-    z-index: 1000;
+    z-index: 999;
+
+    @include respond-to(361px){
+      width: 320px;
+    }
 
     @include respond-to($min-width-large){
       position: static;
       height: 900px !important;
       box-shadow: none;
+      z-index: 1;
     }
   }
 
